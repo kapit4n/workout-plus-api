@@ -3,13 +3,16 @@ package ctrl
 import (
 	m "code/models"
 	"net/http"
+	"strconv"
 
 	"github.com/labstack/echo/v4"
 )
 
 func getUsers() []m.User {
 	u1 := m.User{FullName: "Luis Arce", Email: "luis.arce22@gmail.com", Picture: "", Username: "luarce", Password: "luarce"}
-	users := []m.User{u1}
+	u2 := m.User{FullName: "Camila Arce", Email: "camila.arce22@gmail.com", Picture: "", Username: "luarce", Password: "luarce"}
+	u3 := m.User{FullName: "Daniel Arce", Email: "daniel.arce22@gmail.com", Picture: "", Username: "luarce", Password: "luarce"}
+	users := []m.User{u1, u2, u3}
 	return users
 }
 
@@ -23,8 +26,12 @@ func DeleteUser(c echo.Context) error {
 }
 
 func GetUser(c echo.Context) error {
+	id, error := strconv.Atoi(c.Param("id"))
 	users := getUsers()
-	return c.JSON(http.StatusOK, users[0])
+	if error != nil {
+		return error
+	}
+	return c.JSON(http.StatusOK, users[id])
 }
 
 func ListUsers(c echo.Context) error {
