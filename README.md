@@ -4,7 +4,7 @@
 - go build code
 - go run code
 
-## resources
+## Resources
 - GET ```/```
 - GET ```/users```
 - GET ```/users/:id```
