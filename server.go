@@ -24,5 +24,8 @@ func main() {
 	e.PUT("/users/:id", ctrl.UpdateUser)
 	e.DELETE("/users/:id", ctrl.DeleteUser)
 
+	e.GET(`/categories`, ctrl.GetCategories)
+	e.GET(`/intervals`, ctrl.GetIntervals)
+
 	e.Logger.Fatal(e.Start(":1323"))
 }
