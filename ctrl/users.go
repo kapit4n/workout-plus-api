@@ -1,9 +1,9 @@
 package ctrl
 
 import (
-	m "code/models"
 	"net/http"
 	"strconv"
+	m "workoutplus/models"
 
 	"github.com/labstack/echo/v4"
 )

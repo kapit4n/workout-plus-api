@@ -1,9 +1,9 @@
 package main
 
 import (
-	ctrl "code/ctrl"
-	"code/db"
 	"net/http"
+	ctrl "workoutplus/ctrl"
+	"workoutplus/db"
 
 	"github.com/labstack/echo/v4"
 )

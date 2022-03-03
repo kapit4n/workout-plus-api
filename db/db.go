@@ -1,7 +1,7 @@
 package db
 
 import (
-	models "code/models"
+	models "workoutplus/models"
 
 	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"
