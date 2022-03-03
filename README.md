@@ -1,8 +1,7 @@
 # GOLANG ECHO FRAMEWORK REST API
 
 ## Start it
-- go build code
-- go run code
+- go run server.go
 
 ## Resources
 - GET ```/```
