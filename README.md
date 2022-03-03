@@ -5,6 +5,8 @@
 
 ## Resources
 - GET ```/```
+- GET ```/categories```
+- GET ```/intervals```
 - GET ```/users```
 - GET ```/users/:id```
 - POST ```/users```
